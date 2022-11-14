@@ -1,0 +1,44 @@
+.product {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr auto;
+  grid-template-areas:
+    "image image"
+    "price name";
+
+  width: 50%;
+  background: transparent;
+  border: none;
+  color: white;
+
+  &__image {
+    grid-area: image;
+
+    width: 100%;
+    object-fit: cover;
+
+    // Half the view width minus the padding
+    max-height: calc(50vw - 4rem);
+  }
+
+  &__price,
+  &__name {
+    padding: 1rem 1rem 0 0;
+  }
+
+  &__price {
+    grid-area: price;
+    font-weight: bold;
+  }
+
+  &__name {
+    grid-area: name;
+  }
+
+  &:hover {
+    color: black;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+    cursor: pointer;
+  }
+}
