@@ -1,10 +1,11 @@
+import Button from "./Button";
 import "./TopSection.scss";
 
 const TopSection = () => {
   return (
     <section className="top-section container">
-      <button>Sell</button>
-      <button>Categories</button>
+      <Button text="Sell"></Button>
+      <Button text="Categories"></Button>
     </section>
   );
 };

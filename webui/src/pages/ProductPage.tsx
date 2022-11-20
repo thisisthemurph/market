@@ -5,6 +5,7 @@ import { Product } from "../props.types";
 
 import PageNavigation from "../components/PageNavigation";
 import ButtonGroup from "../components/ButtonGroup";
+import Button from "../components/Button";
 
 const ProductPage = () => {
   const [product, setProduct] = useState<Product | null>(null);
@@ -43,12 +44,12 @@ const ProductPage = () => {
       </section>
 
       <section className="container column">
-        <button className="primary">Message seller</button>
+        <Button type="primary" text="Message seller"></Button>
 
         <ButtonGroup>
-          <button>Send offer</button>
-          <button>Save</button>
-          <button>Share</button>
+          <Button text="Send offer"></Button>
+          <Button text="Save"></Button>
+          <Button text="Share"></Button>
         </ButtonGroup>
 
         <section>

@@ -17,7 +17,7 @@ const Product = ({ product }: Props) => {
   };
 
   return (
-    <button className="product container" onClick={handleSelectProduct}>
+    <button className="product" onClick={handleSelectProduct}>
       <img className="product__image" src={images[0]} alt={name} />
       <p className="product__price">{priceNormal}</p>
       <p className="product__name">{name}</p>

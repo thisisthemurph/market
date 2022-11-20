@@ -99,7 +99,7 @@ body {
 }
 // Buttons
 
-button {
+button.btn {
   cursor: pointer;
   border: solid 1px c.$button-border;
   border-radius: 22px;
@@ -118,5 +118,10 @@ button {
     width: 100%;
     color: c.$button-primary-text;
     background-color: c.$button-primary-bg;
+    border-radius: 9px;
+
+    &:hover {
+      background-color: c.$button-primary-bg--hover;
+    }
   }
 }
