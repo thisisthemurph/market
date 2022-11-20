@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import { getProduct } from "../api/products";
 import { Product } from "../props.types";
 
+import PageNavigation from "../components/PageNavigation";
+
 const ProductPage = () => {
   const [product, setProduct] = useState<Product | null>(null);
   const { productId: productIdParam } = useParams<{ productId?: string }>();
@@ -30,10 +32,8 @@ const ProductPage = () => {
 
   return (
     <>
-      {/* TODO: PageNavigation component */}
-      <section>
-        <button>Back</button>
-      </section>
+      <PageNavigation />
+
       {/* TODO: Carosel component */}
       <img src={product.images[0]} alt={product.name} />
       <h2>{product.name}</h2>

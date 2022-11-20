@@ -1,0 +1,20 @@
+.back-button {
+  cursor: pointer;
+  display: block;
+  background-color: transparent;
+  border: 0;
+
+  font-size: 1.25em;
+  line-height: 1;
+  padding: 1em;
+  transition: transform ease 200ms;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.25);
+  }
+
+  &:active {
+    top: 0.08em;
+  }
+}
