@@ -1,0 +1,13 @@
+@use "sass:color";
+
+$white: white;
+$black: #111;
+
+$button-text: $white;
+$button-bg: rgb(66, 69, 74);
+$button-bg--hover: color.adjust($button-bg, $alpha: -0.4);
+$button-border: #5b5b5d;
+
+$button-primary-text: $black;
+$button-primary-bg: #ffdc00;
+$button-primary-bg--hover: color.adjust($button-primary-bg, $alpha: 0);

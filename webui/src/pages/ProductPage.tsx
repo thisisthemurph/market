@@ -4,6 +4,7 @@ import { getProduct } from "../api/products";
 import { Product } from "../props.types";
 
 import PageNavigation from "../components/PageNavigation";
+import ButtonGroup from "../components/ButtonGroup";
 
 const ProductPage = () => {
   const [product, setProduct] = useState<Product | null>(null);
@@ -35,20 +36,25 @@ const ProductPage = () => {
       <PageNavigation />
 
       {/* TODO: Carosel component */}
-      <img src={product.images[0]} alt={product.name} />
-      <h2>{product.name}</h2>
-      <p>{product.priceNormal}</p>
-      <button>Message seller</button>
-      {/* TODO: Buttonn list component */}
-      <section>
-        <button>Like</button>
-        <button>Comment</button>
-        <button>Send offer</button>
-        <button>Save</button>
+      <section className="column column__sm">
+        <img src={product.images[0]} alt={product.name} />
+        <h2 className="container">{product.name}</h2>
+        <p className="container">{product.priceNormal}</p>
       </section>
-      <section>
-        <h3>Description</h3>
-        <p>{product.description}</p>
+
+      <section className="container column">
+        <button className="primary">Message seller</button>
+
+        <ButtonGroup>
+          <button>Send offer</button>
+          <button>Save</button>
+          <button>Share</button>
+        </ButtonGroup>
+
+        <section>
+          <h3>Description</h3>
+          <p>{product.description}</p>
+        </section>
       </section>
     </>
   );

@@ -1,3 +1,5 @@
+@use "./styles/colors" as c;
+
 /* Box sizing rules */
 *,
 *::before,
@@ -80,5 +82,41 @@ body {
 }
 
 .container {
-  padding: 1rem;
+  padding: 0 1rem;
+}
+
+.column {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+
+  &__sm {
+    padding-top: 0rem;
+    row-gap: 0.5rem;
+  }
+}
+// Buttons
+
+button {
+  cursor: pointer;
+  border: solid 1px c.$button-border;
+  border-radius: 22px;
+  padding: 0.75rem 1.75rem;
+
+  color: c.$button-text;
+  background-color: c.$button-bg;
+
+  transition: background-color 250ms ease;
+
+  &:hover {
+    background-color: c.$button-bg--hover;
+  }
+
+  &.primary {
+    width: 100%;
+    color: c.$button-primary-text;
+    background-color: c.$button-primary-bg;
+  }
 }
